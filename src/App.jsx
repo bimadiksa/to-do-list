@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Todos from './components/Todos';
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
       {todos.map((todo) => {
         return <p key={todo.id}>{todo.title}</p>
       })}
+       {/* Berikan data-nya ke component Todos */}
+       <Todos todos={todos} />
     </div>
   )
 }
