@@ -26,16 +26,21 @@ function App() {
 
 
   return (
-    <div>
-      <h1>My Todo List</h1>
-      {/* Gunakan method map di sini */}
-      {todos.map((todo) => {
-        return <p key={todo.id}>{todo.title}</p>
-      })}
-       {/* Berikan data-nya ke component Todos */}
-       <Todos todos={todos} />
+    <div style={styles.container}>
+      <h1 style={styles.title}>My Todo List</h1>
+      <Todos todos={todos} />
     </div>
   )
+}
+
+const styles = {
+  container: {
+    textAlign: 'center',
+    padding: '12px',
+  },
+  title: {
+    fontSize: '36px',
+  },
 }
 
 
